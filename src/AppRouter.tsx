@@ -5,6 +5,9 @@ import RequestOptimizationPage from "./pages/RequestOptimizationPage/RequestOpti
 import PlanPage from "./pages/PlanPage/PlanPage";
 import HomePage from "./pages/HomePage/HomePage";
 import App from "./App";
+import PlanListPage from "./pages/PlanListPage/PlanListPage";
+import StrategyEditPage from "./pages/StrategyEditPage/StrategyEditPage";
+import NotificationsPage from "./pages/NotificationsPage/NotificationsPage";
 
 export const AppRouter = createBrowserRouter([
     {
@@ -29,8 +32,20 @@ export const AppRouter = createBrowserRouter([
                 element: <RequestOptimizationPage />
             },
             {
+                path: 'plans',
+                element: <PlanListPage />
+            },
+            {
                 path: 'plan/:requestId',
                 element: <PlanPage />
+            },
+            {
+                path: 'plan/:requestId/edit',
+                element: <StrategyEditPage />
+            },
+            {
+                path: 'notifications',
+                element: <NotificationsPage />
             },
         ],
     }
